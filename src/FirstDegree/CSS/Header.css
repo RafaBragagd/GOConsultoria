@@ -1,0 +1,119 @@
+@media (max-width: 400px){
+    /*Cabeçalho Principal*/
+    .header{
+        /*--Estilização--*/
+        background-color: #ffffff;
+        /*--posicionamento--*/
+        align-items: center;
+        display: flex;
+        justify-content:space-between;
+        position: relative;
+        z-index: 10;
+        /*--Estilização--*/
+        box-shadow: 0 0 7px #000000;
+    }
+    .logo{
+        /*--Espaçamento--*/
+        padding: 10px;
+        padding-bottom: 20px;
+        /*--Tamanho--*/
+        width: auto;
+        height: 6rem;
+    }
+    #menuButton{
+        display: initial;
+        /*--Espaçamento--*/
+        margin-right: 5.5vw;
+        margin: 2vw 5vw;
+        padding: 2px;
+        /*--Estilização--*/
+        border: none;
+        background: transparent;
+    }
+    #menuButton img{
+        /*--Espaçamento--*/
+        padding: 0;
+        /*--Tamanho--*/
+        width: auto;
+        height: 3rem;
+    }
+
+    /*Menu DropDown*/
+    .menu{
+        box-sizing: border-box;
+        /*--Espaçamento--*/
+        margin: 0;
+        padding: 0 ;
+        /*--posicionamento--*/
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        z-index: 9;
+        /*--Tamanho--*/
+        width: 100%;
+    }
+    .menu li{
+        box-sizing: border-box;
+        /*--Estilização--*/
+        background-color: #d5eef1;
+        border-bottom: 1px solid #00000060;
+        list-style: none;
+        /*--posicionamento--*/
+        text-align: center;
+        /*--Tamanho--*/
+        width: 100vw;
+    }
+    .menu li:nth-child(4){
+        /*--Animation--*/
+        transition: .5s 0ms ease-out;
+        transition-property: transform, opacity;
+        /*--Estilização--*/
+        border-bottom: none;
+        
+    }
+    .menu li:nth-child(3){
+        /*--Animation--*/
+        transition: .5s 100ms ease-out;
+        transition-property: transform, opacity;
+    }
+    .menu li:nth-child(2){
+        /*--Animation--*/
+        transition: .5s 200ms ease-out;
+        transition-property: transform, opacity;
+    }
+    .menu li:nth-child(1){
+        /*--Animation--*/
+        transition: .5s 300ms ease-out;
+        transition-property: transform, opacity;
+    }
+    .menu a{
+        box-sizing: border-box;
+        /*--Espaçamento--*/
+        padding: 4vw;
+        /*--Estilização--*/
+        color: #2e2e2e;
+        font-weight: 900;
+        font-size: 1.25rem;
+        text-decoration: none;
+        
+        /*--posicionamento--*/
+        display: block;
+        /*--Tamanho--*/
+        width: 100%;
+    }
+    .menu li:hover{
+        /*--Estilização--*/
+        background-color: #708f92;
+    }.menu li:hover a{
+        /*--Estilização--*/
+       color: #f2f2f2;
+    }
+
+    .disable li{
+        /*--posicionamento--*/
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-400%);
+    }
+}

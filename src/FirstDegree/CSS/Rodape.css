@@ -1,0 +1,134 @@
+@media (max-width: 400px){
+    #rodape{
+        position: relative;
+        display: grid;
+        /*--Espaçamento--*/
+        padding: 20px 5px 40vw 5px;
+        margin: 20px 0 0 0;
+        /*--Estilização--*/
+        background-color: #ffffff;
+        box-shadow: 0 0 5px #000000;
+        /*--Posicionamento--*/
+        justify-items: center;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 4r 1fr 2fr 1fr 1fr 4fr 2fr;
+    }
+    #rodape #Logo{
+        /*--Tamanho--*/
+        width: 75%;
+        height: auto;
+        grid-area: 1 / 1 / 1 / 6;
+    }
+    #rodape h4{
+        /*--Estilização--*/
+        color: #0f03a1;
+        /*--Tamanho--*/
+        font-size: 1.25em;
+        font-weight: 900;
+
+    }
+    #rodape #RedeTitulo{
+        /*--Espaçamento--*/
+        margin: 40px 0 15px 0;
+        /*--Posicionamento--*/
+        grid-area: 2 / 1 / 3 / 6;
+    }
+    #rodape .redes{
+        /*--Tamanho--*/
+        width: 15vw;
+        height: auto;
+    }
+    #rodape #Face{
+        /*--Posicionamento--*/
+        grid-area: 3 / 2 / 4 / 3;
+    }
+    #rodape #Insta{
+        /*--Posicionamento--*/
+        grid-area: 3 / 3 / 4 / 4;
+    }
+    #rodape #Linke{
+        /*--Posicionamento--*/
+        grid-area: 3 / 4 / 4 / 5;
+    }
+    #rodape #Face:hover{
+        /*--Estilização--*/
+        fill: #106bff;
+        filter: drop-shadow(0 0 5px #106bff);
+        transform: scale(110%);
+    }
+    #rodape #Insta:hover{
+        /*--Estilização--*/
+        fill: #ef5971;
+        filter: drop-shadow(0 0 5px #ef5971);
+        transform: scale(110%);
+    }
+    #rodape #Linke:hover{
+        /*--Estilização--*/
+        fill: #086ba4;
+        filter: drop-shadow(0 0 5px #086ba4);
+        transform: scale(110%);
+    }
+    #rodape #WhatsTitulo{
+        /*--Espaçamento--*/
+        margin: 40px 0 0 0;
+        /*--Posicionamento--*/
+        grid-area: 4 / 1 / 5 / 6;
+    }
+    #rodape .TextInformativo{
+        /*--Espaçamento--*/
+        margin: 0;
+        /*--Posicionamento--*/
+        text-align: center;
+        grid-area: 5 / 1 / 6 / 6;
+        /*--Tamanho--*/
+        font-size: .9em;
+    }
+    #rodape #Whats{
+        /*--Espaçamento--*/
+        margin: 25px 3vw;
+        /*--Estilização--*/
+        fill: #52cc61;
+        /*--Posicionamento--*/
+        grid-area: 6 / 3 / 7 / 5;
+        justify-self: flex-start;
+        /*--Tamanho--*/
+        width: 20vw;
+        height: auto;
+    
+    }
+    #rodape #Whats:hover{
+        /*--Estilização--*/
+        filter: drop-shadow(0 0 5px #55ce63);
+        transform: scale(110%);
+    }
+    #rodape .Avatar{
+        position: absolute;
+        pointer-events: none;
+        /*--Tamanho--*/
+        width: 70vw;
+        height: auto;
+        /*--Posicionamento--*/
+        bottom: 0;
+        left: 0;
+    }
+    #finalRodape{
+        position: relative;
+        /*--Espaçamento--*/
+        margin: 0;
+        padding: 5px;
+        /*--Estilização--*/
+        background-color: #434343;
+        /*--Posicionamento--*/
+        z-index: 1;
+    }
+    #finalRodape p{
+        /*--Espaçamento--*/
+        margin: 0;
+        /*--Estilização--*/
+        color: #eeeeee;
+        /*--Posicionamento--*/
+        text-align: center;
+        /*--Tamanho--*/
+        font-size: .9em;
+    }
+}

@@ -1,0 +1,148 @@
+@media (max-width: 400px){
+    /*Gerais*/
+    #body{
+        /*--tamanho--*/
+        width: 100vw;
+        height: auto;
+    }
+    #body .segment{
+        /*--Posicionamento--*/
+        text-align: center;
+        /*--Tamanho--*/
+        font-size: 1.5em;
+        font-weight: 600;
+    }
+    #body .EmpName{
+        /*--Posicionamento--*/
+        color: #0f03a1;
+        /*--Tamanho--*/
+        font-weight: 900;
+        font-size: 1.15em;
+    }
+
+    /*Apresentação da pagina*/
+    #body #Apresentacao{
+        /*--Posicionamento--*/
+        position: relative;
+    }
+    #body #Apresetacao img{
+        /*--Posicionamento--*/
+        /*--Tamanho--*/
+        width: 100%;
+
+    }
+    #body #Apresentacao .ApreText{
+        /*--Espaçamento--*/
+        margin: 0;
+        /*--Estilização--*/
+        background-color: #bde5e97d;
+        border-bottom: 3px solid #9ed9df;
+        /*--Posicionamento--*/
+        position: absolute;
+        top: 0;
+        left: 0;
+        /*--Tamanho--*/
+        width: 100%;
+        height: 99%;
+    }
+    #body #Apresentacao .ApreText .Title{
+        /*--Estilização--*/
+        color: #0f03a1;
+        /*--Tamanho--*/
+        font-weight: bold;
+        font-size: 1.9em;
+        /*--Posicionamento--*/
+        text-align: center;
+        /*--Espaçamento--*/
+        margin: 10vw 5vw 10vw 5vw;
+    }
+    #body #Apresentacao .ApreText .Title h3{
+        /*--Espaçamento--*/
+        margin: 0;
+    }
+    #body #Apresentacao .ApreText .Title #Go{
+        /*--Espaçamento--*/
+        font-size: 2.5em;
+    }
+    #body #Apresentacao .ApreText h4{
+        /*--Espaçamento--*/
+        margin: 25vw 5vw;
+        /*--Estilização--*/
+        color: #000000;
+        font-weight:500;
+        font-size: 1.35em;
+        /*--Posicionamento--*/
+        text-align: center;
+    }
+
+    /*Aba Sobre Nós*/
+    #body #SobreNos{
+        box-sizing: border-box;
+        /*--Espaçamento--*/
+        padding: 1vw 4vw;
+        margin-top: 7px;
+        /*--Estilização--*/
+        background-color: #fafeff;
+        border-radius: 0 50px 50px 0;
+        box-shadow: 0 0 5px #000000;
+    }
+    #body #SobreNos p{
+        /*--Posicionamento--*/
+        text-align:justify;
+    }
+
+    /*--Aba Serviços--*/
+    #body #Servicos{
+        /*--Estilização--*/
+        background-color: #fafeff;
+        border-radius: 50px 0 50px 0;
+        box-shadow: 0 0 5px #000000;
+        /*--Espaçamento--*/
+        margin: 10px 0 0 0;
+        padding: 1px 5px;
+        
+    }
+    #body #Servicos ul{
+        /*--Espaçamento--*/
+        padding: 20px 10px;
+        margin: 0;
+
+    }
+    #body #Vagas{
+        display: flex;
+        /*--Estilização--*/
+        background-color: #fafeff;
+        border-radius: 25px;
+        box-shadow: 0 0 5px #000000;
+        /*--Espaçamento--*/
+        margin: 15px 5px;
+        padding: 10px;
+        /*--Posicionamento--*/
+        flex-direction: column;
+        align-items: center;
+    }
+    #body #Vagas .segment{
+        /*--Tamanho--*/
+        font-size: 1.25em;
+        margin: 0;
+    }
+    #body #Vagas button{
+        /*--Tamanho--*/
+        width: 75%;
+        font-size: 1.5em;
+        font-weight: 700;
+    }
+    #body #Vagas button a{
+        /*--Estilização--*/
+        text-decoration: none;
+        color: #ffffff;
+    }
+    #body #Vagas button:hover{
+        /*--Estilização--*/
+        background-color: #cc4e43;
+    }
+
+    .space{
+        margin: 1px;
+    }
+}

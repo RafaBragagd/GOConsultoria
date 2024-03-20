@@ -1,0 +1,93 @@
+.JobCard{
+    position: absolute;
+    display: none;
+    /*--Animação--*/
+    transition: .5s ease-in-out;
+    /*--Espaçamento--*/
+    padding: 5px;
+    /*--Estilização--*/
+    background-color: #05003f;
+    /*--Posicionamento--*/
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-rows: repeat(3, 6vh) 52vh;
+    justify-items: center;
+    /*--Tamanho--*/
+    height: 70vh;
+}
+.JobCard h3{
+    /*--Espaçamento--*/
+    margin: 20px 0 0 0;
+    /*--Estilização--*/
+    color: #ffffff;
+    /*--Posicionamento--*/
+    grid-area: 1 / 1 / 2 / 4;
+    text-align: center;
+    /*--tamanho--*/
+    font-size: 1.3em;
+    font-weight: 900;
+}
+.JobCard h4{
+    /*--Espaçamento*--*/
+    margin: 0 0 20px 0;
+    /*--Estilização--*/
+    color: #ffffff;
+    /*--Posicionamento--*/
+    grid-area: 2 / 1 / 3 / 4;
+    text-align: center;
+}
+.JobCard h5{
+    /*--Espaçamento*--*/
+    margin: 0 0 20px 0;
+    padding: .5em;
+    /*--Estilização--*/
+    background-color: #37b1bc;
+    border-radius: 25px;
+    color: #05003f;
+    /*--Tamanho--*/
+    font-size: .75em;
+    font-weight: 900;
+    justify-self: auto;
+}
+.JobCard .salary{
+    justify-self: end;
+}
+.JobCard .mode{
+    justify-self: start;
+}
+.JobCard .Content{
+    /*--Espaçamento--*/
+    padding: 15px 5px;
+    /*--Estilização--*/
+    background-color: #ffffff;
+    border-radius: 25px;
+    /*--Posicionamento--*/
+    grid-area: 4 / 1 / 5 / 4;
+}
+.JobCard .Content p{
+    /*--Estilização--*/
+    text-align: justify;
+    /*--Espaçamento--*/
+    margin: 0;
+}
+.JobCard .Content h6{
+    /*--Espaçamento--*/
+    margin: 10px 0;
+    /*--Tamanho--*/
+    font-size: 1em;
+}
+.JobCard .Content li{
+    /*--Estilização--*/
+    list-style:inside !important;
+}
+
+.prev{
+    display: grid;
+    transform: translateX(-110%);
+}
+.next{
+    display: grid;
+    transform: translateX(110%);
+}
+.current{
+    display: grid;
+}

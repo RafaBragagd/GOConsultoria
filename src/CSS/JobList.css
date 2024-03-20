@@ -1,0 +1,50 @@
+#JobCarousel{
+    /*--Espaçamento--*/
+    padding: 5px;
+    margin: 15px 0;
+    /*--Estilização--*/
+    background-color: #fafeff;
+    box-shadow: 0 0 7px #000000;
+}
+#JobCarousel>ul{
+    position: relative;
+    /*--Espaçamento--*/
+    padding: 0;
+    margin: 10px 0 0 0;
+    /*--Tamanho--*/
+    height: 72vh;
+}
+#JobCarousel li{
+    /*--Estilização--*/
+    list-style: none;
+    border-radius: 25px;
+}
+
+#JobCarousel .buttons{
+    display: flex;
+    /*--Espaçamento--*/
+    margin: 0 0 5px 0;
+    /*--posicionamento--*/
+    justify-content: center;
+    align-items: center;
+}
+#JobCarousel .buttons button{
+    /*--Espaçamento--*/
+    margin: 0 2px;
+    /*--Estilização--*/
+    border-radius: 0;
+    /*--Tamanho--*/
+    font-size: 1.5em;
+}
+#JobCarousel .buttons #prev{
+    /*--Estilização--*/
+    border-radius: .5em 0 0 .5em;
+}
+#JobCarousel .buttons #next{
+    /*--Estilização--*/
+    border-radius: 0 .5em .5em 0;
+
+}
+#JobCarousel .buttons #register:hover{
+    color: #ffffff;
+}

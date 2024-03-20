@@ -1,0 +1,42 @@
+@media (max-width: 400px){
+    .SliderText{
+        display: flex;
+        /*--Espaçamento--*/
+        margin: 0 0;
+        /*--Estilização--*/
+        list-style: none;
+        opacity: 0;
+        /*--Posicionamento--*/
+        align-items: center;
+        flex-direction: column;
+    }
+    .SliderText img{
+        /*--Tamanho--*/
+        width: 4.5em;
+        height: auto;
+    }
+    .SliderText  h3{
+        /*--Tamanho--*/
+        font-size: 1.2em;
+        font-weight: 800;
+
+    }
+    
+    .right{
+        /*--Posicionamento--*/
+        transform: translateX(75%);
+        /*--Animação--*/
+        transition: 1s ease-in-out;
+    }
+    .left{
+        /*--Posicionamento--*/
+        transform: translateX(-75%);
+        /*--Animação--*/
+        transition: 1s ease-in-out;
+    }
+    .anima{
+        /*--Posicionamento--*/
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
