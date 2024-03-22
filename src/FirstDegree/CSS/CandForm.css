@@ -1,0 +1,26 @@
+#candidatura{
+    box-sizing: border-box;
+    /*--Espaçamento--*/
+    padding: 5px;
+    margin: 15px 0;
+    /*--Estilização--*/
+    background-color: #fafeff;
+    box-shadow: 0 0 7px #000000;
+    /*--Tamanho--*/
+    width: 100%;
+}
+#candidatura .input{
+    box-sizing: border-box;
+    /*--Estilização--*/
+    border: 0;
+    border-bottom: solid 2px #868686;
+    /*--Tamanho--*/
+    width: 100%;
+    font-size: 1em;
+}
+#candidatura .input:focus{
+    outline: none;
+}
+::-webkit-calendar-picker-indicator {
+    display: none;
+}

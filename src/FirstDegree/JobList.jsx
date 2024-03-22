@@ -3,8 +3,7 @@ import { Link } from "react-router-dom";
 import React, { useEffect, useState } from 'react'
 
 //Components
-import JobCard from './FirstDegree/jobCard.jsx'
-import Header from './FirstDegree/header.jsx'
+import JobCard from './SecondDegree/jobCard.jsx'
 
 //Font Awesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -143,7 +142,6 @@ function JobList() {
 
   return (
     <>
-        <Header MenuD={Menu} />
         <section id='JobCarousel'>
             <ul>
                 {carrossel}

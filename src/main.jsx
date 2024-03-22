@@ -4,8 +4,9 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 
 //Components
-import Home from './Home.jsx'
-import JobList from './JobList.jsx'
+import Home from './FirstDegree/home.jsx'
+import JobList from './FirstDegree/JobList.jsx'
+import CandForm from './FirstDegree/candForm.jsx'
 import App from "./app.jsx";
 
 //CSS
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
       {
         path:"joblist",
         element: <JobList />,
+      },
+      {
+        path:"candidateForm",
+        element: <CandForm />,
       },
    ],
   },

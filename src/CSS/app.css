@@ -1,0 +1,15 @@
+.RoundBtn{
+    position: fixed;
+    /*--Espaçamento--*/
+    padding: 4px 4px 0 4px;
+    margin: 0;
+    /*--Estilização--*/
+    border-radius: 50% 0 0 0;
+    opacity: .75;
+    /*--Posicionamento--*/
+    right: 0;
+    bottom: 0;
+    z-index: 9;
+    /*--Tamanho--*/
+    font-size: 1.75em;
+}
