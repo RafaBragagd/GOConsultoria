@@ -1,0 +1,42 @@
+:root{
+    --heightTriangle:9px;
+}
+.customList{
+    display: none;
+    position: absolute;
+    /*--Espaçamento--*/
+    margin: 0;
+    padding: 0;
+    /*-_Estilização--*/
+    background-color: #9ad3d9;
+    overflow-y: auto;
+    /*--Posicionamento--*/
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 8;
+    /*--Tamanho00*/
+    max-height: 30vh;
+    width: max-content;
+    min-width: 75%;
+}
+.customList li{
+    cursor: pointer;
+    /*--Espaçamento--*/
+    padding: 5px;
+    /*--Estilização--*/
+    list-style: none;
+    color: #343434;
+    /*--Posicionamento--*/
+    text-align: center;
+    /*--Tamanho--*/
+    font-weight: 700;
+}
+.customList li:focus{
+    /*--Estilização--*/
+    background-color: #00000010;
+    color: #cc4e43;
+    outline: none;
+}
+.customList.active{
+    display: block;
+}

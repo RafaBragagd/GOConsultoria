@@ -20,11 +20,21 @@ button{
   /*--Estilização--*/
   background-color: #37b1bc;
   border: none;
-  border-radius: 15px;
+  border-radius: 10px;
   color: #fefefe;
   font-family: 'Inter', sans-serif;
 }
 button:hover{
   /*--Estilização--*/
   background-color: #cc4e43;
+}
+
+
+/*--Estilizações preferenciais--*/
+html body #root .inputContainer.invalid .validateInp {
+  border-color: #cc4e43;
+  color: #cc4e43;
+}
+html body #root .inputContainer.invalid .validateInp::placeholder{
+  color: #cc4e43;
 }

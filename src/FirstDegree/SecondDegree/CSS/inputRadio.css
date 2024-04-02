@@ -1,0 +1,102 @@
+h4.labelForm{
+    /*--Espaçamento--*/
+    margin: 5px 0;
+    /*--Posicionamento--*/
+    text-align: justify;
+    /*--Tamanho--*/
+    font-weight: 500;
+}
+.radiocontainer{
+    display: flex;
+    /*--Espaçamento--*/
+    padding: 5px;
+    margin-bottom: 10px;
+    /*--Estilização--*/
+    background-color: #d8d8d8;
+    border-radius: 10px;
+    /*--Posicionamento--*/
+    align-items: center;
+    /*--Tamanho--*/
+    width: max-content;
+    height: min-content;
+}
+.radiocontainer.colum{
+    box-sizing: border-box;
+    /*--Estilização--*/
+    background-color: transparent;
+    /*--Posicionamento--*/
+    flex-direction: column;
+    /*--Tamanho--*/
+    width: 100%;
+}
+.radiocontainer .radioOption{
+    display: flex;
+    /*--Posicionamento--*/
+    justify-content: center;
+    align-items: center;
+    /*--tamanho--*/
+    width: 100%;
+}
+.radiocontainer.colum .radioOption{
+    /*--Espaçamento--*/
+    padding: 3px;
+    margin: 2px 0;
+    /*--Estilização--*/
+    background-color: #d8d8d8;
+    border-radius: 10px;
+    /*--Posicionamento--*/
+    justify-content: flex-start;
+}
+.radiocontainer .radioOption .labelForm{
+    display: inline;
+    /*--Espaçamento--*/
+    padding-right: 5px;
+    /*--Estilização--*/
+    color: #000000;
+    border-right: 1px solid #000000;
+    /*--Tamanho--*/
+    font-weight: 300;
+}
+.radiocontainer .radioOption .labelForm.last{
+    padding-right: 0;
+    border-right: none;
+}
+.radiocontainer.colum .labelForm{
+    padding-right: 0;
+    border-right: none;
+    align-self:flex-start;
+}
+.radiocontainer .radioOption .inputRadio{
+    position: relative;
+
+    /*--Animação--*/
+    transition: 0.2s all linear;
+
+    /*--Espaçamento--*/
+    margin: 0 5px;
+
+    /*--Estilização--*/
+    appearance: none;
+    border: 2px solid #404040;
+    border-radius: 25%;
+
+    /*--Posicionamento--*/
+
+    /*--Tamanho--*/
+    flex: 0 0 auto;
+    width: 16px;
+    height: 16px;
+}
+.radiocontainer .radioOption .inputRadio:focus{
+    border: 5px solid #404040;
+    outline: none;
+}
+.radiocontainer .radioOption .inputRadio:checked{
+    border: 6px solid #000000;
+}
+.radiocontainer.colum .radioOption .inputRadio{
+    /*--Espaçamento--*/
+    margin-top: 2px;
+    /*--Posicionamento--*/
+    align-self:flex-start;
+  }

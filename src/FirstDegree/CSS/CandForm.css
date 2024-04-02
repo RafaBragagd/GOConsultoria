@@ -1,4 +1,5 @@
 #candidatura{
+    display: flex;
     box-sizing: border-box;
     /*--Espaçamento--*/
     padding: 5px;
@@ -6,21 +7,75 @@
     /*--Estilização--*/
     background-color: #fafeff;
     box-shadow: 0 0 7px #000000;
+    /*--Posicionamento--*/
+    flex-direction: column;
+    /*--Tamanho--*/
+    width: 100vw;
+}
+
+#candidatura .introduction{
+    display: flex;
+    /*--Estilização--*/
+    border-bottom: 2px solid #868686;
+    /*--Espaçamento--*/
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    /*--Posicionamento--*/
+    flex-direction: column;
+}
+#candidatura .introduction h3{
+    /*--Posicionamento--*/
+    align-self: center;
+    /*--Tamanho--*/
+    font-size: 1.5em;
+}
+#candidatura .introduction p{
+    /*--Espaçamento--*/
+    margin: 5px 0;
+    /*--Posicionamento--*/
+    text-align: justify;
+
+}
+#candidatura .introduction p a{
+    text-decoration: none;
+    color: #0f03a1;
+}
+#candidatura .introduction p a:visited{
+    color: #0f03a1;
+}
+
+#cidades{
     /*--Tamanho--*/
     width: 100%;
 }
-#candidatura .input{
+
+#candidatura fieldset{
     box-sizing: border-box;
     /*--Estilização--*/
-    border: 0;
-    border-bottom: solid 2px #868686;
+    color: #404040;
+    border-radius: 10px;
     /*--Tamanho--*/
     width: 100%;
-    font-size: 1em;
 }
-#candidatura .input:focus{
-    outline: none;
+#candidatura #Contato{
+    display: grid;
+    /*--Posicionamento--*/
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
 }
-::-webkit-calendar-picker-indicator {
-    display: none;
+#candidatura #Contato #email{
+    /*--Posicionamento--*/
+    grid-area: 2 / 1 / 3 / 3;
+}
+
+#candidatura #Adicionais{
+    display: flex;
+    /*--Posicionamento--*/
+    flex-direction: column;
+    align-items: flex-start;
+}
+#candidatura #curriContainer{
+    margin-top: 15px;
+    margin-left: 5px;
 }
