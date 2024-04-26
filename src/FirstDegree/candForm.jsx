@@ -1,11 +1,16 @@
 import React, { useRef, useEffect, useState } from 'react'
 
+//CORS
+
 //CSS
 import './CSS/CandForm.css'
 
 //Componentes
 import Input from "./SecondDegree/inputBox.jsx"
 import InputRadio from './SecondDegree/InputRadio.jsx'
+
+//JSON
+import links from "./credenciais/links.json"
 
 const InputTypes = {
   letters : /^[a-zA-ZÀ-ÿ\s]*$/,
@@ -16,6 +21,7 @@ const InputTypes = {
 const InputValid = {
   required : /^(?!\s*$).+/,
 }
+
 
 function candForm() {
   const [estados, setEstados] = useState([])
@@ -31,6 +37,7 @@ function candForm() {
   const fone    = useRef(null)
   const secFone = useRef(null)
   const email   = useRef(null)
+
   const moving  = useRef(null)
   const work    = useRef(null)
   const CNH     = useRef(null)
@@ -44,6 +51,7 @@ function candForm() {
   const team    = useRef(null)
   const WEnviPre= useRef(null)
   const curriFil= useRef(null)
+
   const subBtn  = useRef(null)
 
 
@@ -82,9 +90,6 @@ function candForm() {
     const retorno = state.current.getValue()
     setEstadoSelecionado(retorno)
   }
-  const submit = (event) => {
-    event.preventDefault()
-  }
   const keyDown = (event) => {
     if(event.key === 'Enter'){
       event.preventDefault()
@@ -95,8 +100,60 @@ function candForm() {
       subBtn.current.focus()
     }
   }
+
+
+
+  const submit = (event) => {
+    event.preventDefault()
+    const form = document.querySelector("#candidatura")
+    const formData = new FormData()
+
+    formData.append('name', name.current.getValue())
+    formData.append('age', age.current.getValue())
+    formData.append('state', state.current.getValue())
+    formData.append('city', city.current.getValue())
+    formData.append('fone', fone.current.getValue())
+    formData.append('secFone', secFone.current.getValue())
+    formData.append('email', email.current.getValue())
+    formData.append('mudanca', moving.current.getValue())
+    formData.append('trabalha', work.current.getValue())
+    formData.append('cnh', CNH.current.getValue())
+    formData.append('formacao', formacao.current.getValue())
+    formData.append('challenge', challeng.current.getValue())
+    formData.append('socials', socialS.current.getValue())
+    formData.append('WorkEnviromentProp', WEnviPro.current.getValue())
+    formData.append('decision', decision.current.getValue())
+    formData.append('conflicts', conflict.current.getValue())
+    formData.append('organization', organiz.current.getValue())
+    formData.append('team', team.current.getValue())
+    formData.append('WorkEnviromentPref', WEnviPre.current.getValue())
+    formData.append('curriculo', curriFil.current.files[0])
+
+    
+  fetch(links.appscript, {
+            redirect: "follow",
+            method:"POST", 
+            headers: {
+              'Content-Type': 'multipart/form-data'
+            },
+            body: formData,
+          })
+          .then(response => {
+            if (response.ok) {
+              alert('Formulário enviado com sucesso!');
+            }
+          })
+          .catch(error => {
+            console.error('Erro ao enviar o formulário:', error);
+            alert('Ocorreu um erro ao enviar o formulário. Por favor, tente novamente.');
+          });
+  
+  }
+
+
   return (
-    <form action="" method="post" encType="multipart/form-data" id='candidatura' onKeyDown={keyDown} onSubmit={submit} noValidate >
+    <form action="" method="post" encType="multipart/form-data" id='candidatura' 
+    onKeyDown={keyDown} onSubmit={submit} autoComplete='off' noValidate  >
       <div className="introduction">
         <h3>Currículo <span className="EmpName">GO!</span></h3>
         <p>Olá! Através deste espaço podemos conhecer você um pouco melhor, para ser possível te destinar a vaga ideal! Fique tranquilo, seus dados estão seguros conosco! </p>
@@ -126,7 +183,7 @@ function candForm() {
                 ref={secFone} mask="(00) 00000-0000" id="secFone" 
                 nextRef={email.current ? email.current.getInputRef(): null} />
         <Input  className="input" placeholder="Informe seu email de contato"
-                ref={email} containerId="email" validation={/^[\w-]+(?:\.[\w-]+)*@(?:[\w-]+\.)+[a-zA-Z]{2,7}$/} 
+                ref={email} containerId="email" id={"emailInp"} validation={/^[\w-]+(?:\.[\w-]+)*@(?:[\w-]+\.)+[a-zA-Z]{2,7}$/} 
                 nextRef={moving.current ? moving.current.getFirst(): null} invalidAlert='Informe um endereço de email valido' />
       </fieldset>
       <fieldset id='Adicionais'>
@@ -164,7 +221,7 @@ function candForm() {
         <input ref={curriFil} type="file" id="curriculo" name="curriculo" accept=".pdf,.doc,.docx" onKeyDown={keyDownCurri} /><br /><br />
       </div>
 
-      <button ref={subBtn} onClick={submit} type='submit'>Enviar</button>
+      <button ref={subBtn} type='submit'>Enviar</button>
     </form>
   )
 }

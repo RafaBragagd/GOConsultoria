@@ -50,7 +50,7 @@ function InputRadio({group="", options, title="", containerClass="", nextRef}, r
         <div ref={divRef} className={`radiocontainer ${containerClass}`} onKeyDown={handleKeyDown}>
             {options.map((option, index) => (
                 <div key={index} className='radioOption'>
-                    <input className='inputRadio' type="radio" id={`${option}_${group}`} name={group} value={option} onChange={handleChange} />
+                    <input className='inputRadio' type="radio" id={`${option}_${group}`} name={group} value={option} onChange={handleChange} autoComplete='off'/>
                     <label className={`labelForm ${index===(options.length - 1) ? "last": ""}`} htmlFor={`${option}_${group}`}>{option}</label>
                 </div>
             ))}

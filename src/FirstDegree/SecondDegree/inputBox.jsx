@@ -1,4 +1,4 @@
-import React, { forwardRef, useImperativeHandle, useRef, useState } from 'react'
+import React, { forwardRef, useEffect, useImperativeHandle, useRef, useState } from 'react'
 import {IMaskInput, IMask} from 'react-imask'
 
 //CSS
@@ -7,7 +7,7 @@ import './CSS/inputBox.css'
 //Components
 import List from './ThirdDegree/List'
 
-function inputPersonalizado({className, containerId, placeholder, mask, id, name, validation=/.*/, invalidAlert="Preencha este campo", fullList=[], onBlur = () => {}, nextRef}, ref) {
+function inputPersonalizado({className, containerId, placeholder, mask, id, validation=/.*/, invalidAlert="Preencha este campo", fullList=[], onBlur = () => {}, nextRef}, ref) {
   //UseStates
   const [validClass, setValidClass] = useState("")
   const [classList, setClassList]   = useState("")
@@ -19,9 +19,6 @@ function inputPersonalizado({className, containerId, placeholder, mask, id, name
   const listRef = useRef(null)
 
   //Funções
-  const inpSubmit = () => {
-    console.log("Passou aqui")
-  }
   const getValue = () => {
     return inputRef.current.value
   }
@@ -79,17 +76,18 @@ function inputPersonalizado({className, containerId, placeholder, mask, id, name
 
   //Hooks
   useImperativeHandle(ref, () => ({
-    inpSubmit,
     getInputRef,
     getValue,
     inpValid,
   }))
-
+  useEffect(() => {
+    inputRef.current.name = id
+  }, [])
   //Retorno
   return (
     <div ref={containerRef} className={`inputContainer ${validClass}`} id={containerId}>
       <IMaskInput className={`validateInp ${className}`} placeholder={placeholder}
-                  ref={ref} inputRef={inputRef} mask={mask} id={id} name={name} 
+                  ref={ref} inputRef={inputRef} mask={mask} id={id} 
                   onAccept={(value) => {filter(value)}} onKeyDown={inpKeyDown} autoComplete='off'
                   onBlur={inpBlur} />
       <span className='alert'>{invalidAlert}</span>
